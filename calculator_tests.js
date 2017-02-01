@@ -49,6 +49,12 @@ QUnit.test("Square root test", function (assert) {
     allClear();
 });
 //US6: As a user I want to be able to calculate the square of a number by simply pressing a button.
+QUnit.test("Square a Number", function (assert) {
+    addDigit('3');
+    square();
+    assert.equal(document.getElementById("screen").value, "9", "Passed - Expected 9");
+    allClear();
+});
 //US7: As a user who sometimes makes mistakes when pressing buttons on the keypad, I want to be able to press a button that clears my current input, but not the stored procedure.
 //US8: Bug Alert! There is a bug in the calculator app! As a careless user I want to be told that I just tried to divide by zero, which I should be told is not allowed.
 //US9: Bug Alert! As an easily confused user I don't want to be able to type numbers into the screen that causes some of the numbers to disappear off the screen, thus confusing me about what I actually typed.
