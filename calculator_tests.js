@@ -28,6 +28,12 @@ QUnit.test("Add decimal test", function (assert) {
     allClear();
 });
 //US3: As a user, I want to be able to calculate the inverse of a number simply by pressing a button.
+QUnit.test("Inverse number test", function (assert) {
+    addDigit(2)
+    inverse();
+    assert.equal(document.getElementById("screen").value, "0.5", "Passed - Expected 0.5");
+    allClear();
+});
 //US4: As a user I want to be able to calculate the factorial of a number by simply pressing a button.
 //US5: As a user I want to be able to calculate the square root of a number by simply pressing a button.
 //US6: As a user I want to be able to calculate the square of a number by simply pressing a button.
