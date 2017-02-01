@@ -35,6 +35,12 @@ QUnit.test("Inverse number test", function (assert) {
     allClear();
 });
 //US4: As a user I want to be able to calculate the factorial of a number by simply pressing a button.
+QUnit.test("Calculating Factorial", function (assert) {
+    addDigit('5');
+    factorial();
+    assert.equal(document.getElementById("screen").value, "120", "Passed - Expected 120");
+    allClear();
+});
 //US5: As a user I want to be able to calculate the square root of a number by simply pressing a button.
 //US6: As a user I want to be able to calculate the square of a number by simply pressing a button.
 //US7: As a user who sometimes makes mistakes when pressing buttons on the keypad, I want to be able to press a button that clears my current input, but not the stored procedure.
