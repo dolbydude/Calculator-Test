@@ -78,3 +78,18 @@ QUnit.test("Screen containment function test", function (assert) {
     assert.equal(document.getElementById("screen").value, "999999999999999999", "Passed - Expected 999999999999999999");
     allClear();
 });
+//US10: As a user I want to be able to have trig functions.
+QUnit.test("Screen containment function test", function (assert) {
+    addDigit('0');
+    sin();
+    assert.equal(document.getElementById("screen").value, "0", "Passed - Expected 0");
+    allClear();
+    addDigit('0');
+    cos();
+    assert.equal(document.getElementById("screen").value, "1", "Passed - Expected 1");
+    allClear();
+    addDigit('0');
+    tan();
+    assert.equal(document.getElementById("screen").value, "0", "Passed - Expected 0");
+    allClear();
+});
